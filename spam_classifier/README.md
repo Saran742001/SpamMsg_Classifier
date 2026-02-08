@@ -471,7 +471,7 @@ This project is open source and available for educational purposes.
 
 ## 👤 Author
 
-This project is completely done by Saran for learning NLP
+This project is completely done by Saran for learning NLP Basics
 
 
 ## 📧 Contact & Support
