@@ -8,6 +8,7 @@ A machine learning project that classifies SMS messages and emails as **Spam** o
 - [Features](#features)
 - [Project Structure](#project-structure)
 - [Installation](#installation)
+- [Git & Repository Setup](#git--repository-setup)
 - [Usage](#usage)
 - [Dataset](#dataset)
 - [Model Details](#model-details)
@@ -108,7 +109,133 @@ pip install pandas scikit-learn nltk joblib
 python -c "import nltk; nltk.download('stopwords')"
 ```
 
-## 📖 Usage
+## � Git & Repository Setup
+
+### Initialize Git Repository (First Time)
+
+If you haven't initialized Git yet:
+
+```bash
+cd /Users/apple/Documents/NLP/spam_classifier
+git init
+git config user.name "Your Name"
+git config user.email "your.email@example.com"
+```
+
+### Create `.gitignore` File
+
+Before pushing, create a `.gitignore` file to exclude unnecessary files:
+
+```bash
+# Create .gitignore
+cat > .gitignore << EOF
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Model files (optional - exclude large files)
+*.pkl
+*.model
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+EOF
+```
+
+### Add All Files to Git
+
+```bash
+git add .
+git commit -m "Initial commit: Spam Classifier project"
+```
+
+### Push to New Repository
+
+#### Option 1: Create on GitHub and Push
+
+1. **Create a new repository on GitHub:**
+   - Go to [GitHub.com](https://github.com/new)
+   - Click "New repository"
+   - Enter repository name: `spam-classifier`
+   - Choose "Public" or "Private"
+   - Click "Create repository"
+
+2. **Add remote and push:**
+   ```bash
+   git remote add origin https://github.com/YOUR-USERNAME/spam-classifier.git
+   git branch -M main
+   git push -u origin main
+   ```
+
+#### Option 2: Using GitHub CLI
+
+If you have GitHub CLI installed:
+
+```bash
+# Authenticate with GitHub
+gh auth login
+
+# Create repository
+gh repo create spam-classifier --source=. --public
+
+# Push to repository
+git push
+```
+
+#### Option 3: Push to GitLab or Other Platforms
+
+**GitLab:**
+```bash
+git remote add origin https://gitlab.com/YOUR-USERNAME/spam-classifier.git
+git branch -M main
+git push -u origin main
+```
+
+**Bitbucket:**
+```bash
+git remote add origin https://bitbucket.org/YOUR-USERNAME/spam-classifier.git
+git branch -M main
+git push -u origin main
+```
+
+### Check Remote Configuration
+
+```bash
+git remote -v
+```
+
+Expected output:
+```
+origin  https://github.com/YOUR-USERNAME/spam-classifier.git (fetch)
+origin  https://github.com/YOUR-USERNAME/spam-classifier.git (push)
+```
+
+### Future Commits and Pushes
+
+```bash
+# Make changes to your code
+git add .
+git commit -m "Description of your changes"
+git push origin main
+```
+
+## �📖 Usage
 
 ### 1️⃣ Training the Model
 
