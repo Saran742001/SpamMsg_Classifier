@@ -1,0 +1,3 @@
+Frontend developer skilled in React, JavaScript, HTML, and CSS.
+Built responsive UI components and worked with REST APIs.
+No experience in machine learning or NLP.

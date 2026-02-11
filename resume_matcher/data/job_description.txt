@@ -1,0 +1,3 @@
+We are looking for a Python Developer with experience in NLP, machine learning,
+data analysis, and REST APIs. The candidate should be familiar with Python,
+pandas, scikit-learn, and basic deep learning concepts.
